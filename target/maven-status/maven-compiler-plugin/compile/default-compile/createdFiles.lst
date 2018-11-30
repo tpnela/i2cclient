@@ -1,0 +1,15 @@
+com\herbstreuth\i2cclient\dto\LIS3DHdto.class
+com\herbstreuth\i2cclient\dao\I2CsensorInterface.class
+com\herbstreuth\i2cclient\dto\BME280dto.class
+com\herbstreuth\i2cclient\dao\LOCALMEMORYdao.class
+com\herbstreuth\i2cclient\kafka\KafkaProducerFactory.class
+com\herbstreuth\i2cclient\dto\LOCALMEMORYdto.class
+com\herbstreuth\i2cclient\output\OutputFacetConsole.class
+com\herbstreuth\i2cclient\output\OutputFacetInterface.class
+com\herbstreuth\i2cclient\output\OutputFacetKafka.class
+com\herbstreuth\i2cclient\dao\LIS3DHdao.class
+com\herbstreuth\i2cclient\main\Configuration.class
+com\herbstreuth\i2cclient\dao\BME280dao.class
+com\herbstreuth\i2cclient\output\OutputFacet.class
+com\herbstreuth\i2cclient\dto\SensorDtoInterface.class
+com\herbstreuth\i2cclient\main\Application.class

@@ -1,0 +1,15 @@
+C:\DEV\Raspberry\workspaces\i2cClient\src\main\java\com\herbstreuth\i2cclient\kafka\KafkaProducerFactory.java
+C:\DEV\Raspberry\workspaces\i2cClient\src\main\java\com\herbstreuth\i2cclient\main\Configuration.java
+C:\DEV\Raspberry\workspaces\i2cClient\src\main\java\com\herbstreuth\i2cclient\dto\LOCALMEMORYdto.java
+C:\DEV\Raspberry\workspaces\i2cClient\src\main\java\com\herbstreuth\i2cclient\output\OutputFacetKafka.java
+C:\DEV\Raspberry\workspaces\i2cClient\src\main\java\com\herbstreuth\i2cclient\dto\BME280dto.java
+C:\DEV\Raspberry\workspaces\i2cClient\src\main\java\com\herbstreuth\i2cclient\output\OutputFacet.java
+C:\DEV\Raspberry\workspaces\i2cClient\src\main\java\com\herbstreuth\i2cclient\dto\LIS3DHdto.java
+C:\DEV\Raspberry\workspaces\i2cClient\src\main\java\com\herbstreuth\i2cclient\output\OutputFacetConsole.java
+C:\DEV\Raspberry\workspaces\i2cClient\src\main\java\com\herbstreuth\i2cclient\dao\I2CsensorInterface.java
+C:\DEV\Raspberry\workspaces\i2cClient\src\main\java\com\herbstreuth\i2cclient\dto\SensorDtoInterface.java
+C:\DEV\Raspberry\workspaces\i2cClient\src\main\java\com\herbstreuth\i2cclient\dao\LIS3DHdao.java
+C:\DEV\Raspberry\workspaces\i2cClient\src\main\java\com\herbstreuth\i2cclient\dao\BME280dao.java
+C:\DEV\Raspberry\workspaces\i2cClient\src\main\java\com\herbstreuth\i2cclient\output\OutputFacetInterface.java
+C:\DEV\Raspberry\workspaces\i2cClient\src\main\java\com\herbstreuth\i2cclient\dao\LOCALMEMORYdao.java
+C:\DEV\Raspberry\workspaces\i2cClient\src\main\java\com\herbstreuth\i2cclient\main\Application.java

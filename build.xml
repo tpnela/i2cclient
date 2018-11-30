@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<project name="rest4raspi" default="all">
+
+	<!--
+	<property name="mvnExecutable" value="C:\bin\apache-maven-3.5.0\bin\mvn" />
+	<property name="sourceDir" value="C:\Users\thomas\OneDrive\Dokumente\Raspberry\workspaces\i2cClient\target" />
+	<property name="targetDir" value="/home/pi/rest4raspi" />
+	<property name="user" value="pi" />
+	<property name="host" value="192.168.178.23"/>
+	<property name="keyfile" value="C:\bin\cygwin\home\thomas\.ssh\id_rsa" />
+	-->
+
+	<property name="mvnExecutable" value="C:\bin\apache-maven-3.6.0\bin\mvn" />
+	<property name="sourceDir" value="C:\DEV\Raspberry\workspaces\i2cClient\target" />
+	<property name="targetDir" value="/home/pi/rest4raspi" />
+	<property name="user" value="pi" />
+	<property name="host" value="192.168.0.150" />
+	<property name="keyfile" value="C:\DEV\bin\cygwin64\home\HERBTHO2\.ssh\id_rsa" />
+	<property name="knownhostsfile" value="C:\DEV\bin\cygwin64\home\HERBTHO2\.ssh\known_hosts" />
+
+
+
+	<target name="info">
+		<echo>This is the barographDeviceclient buildfile</echo>
+		<echo>Targets:</echo>
+		<echo>- build</echo>
+		<echo>  creates a fat jar</echo>
+		<echo>- copy</echo>
+		<echo>  Copies the jar file to the raspberry</echo>
+		<echo>- all</echo>
+		<echo>  runs build and copy</echo>
+	</target>
+
+	<target name="all" depends="build,copy" />
+
+	<target name="build">
+		<exec dir="." executable="cmd">
+			<arg value="/C" />
+			<arg value="${mvnExecutable}" />
+			<arg line="clean package" />
+		</exec>
+	</target>
+
+	<target name="copy">
+		<echo>Executing target - stream</echo>
+		<scp todir="${user}@${host}:${targetDir}" keyfile="${keyfile}" passphrase="" trust="true" verbose="true">
+
+			<fileset dir="${sourceDir}" casesensitive="yes">
+				<include name="**/i2c*SNAPSHOT.jar" />
+				<exclude name="**/*Test*" />
+			</fileset>
+		</scp>
+	</target>
+
+</project>
+
