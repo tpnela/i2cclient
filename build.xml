@@ -1,24 +1,24 @@
 <?xml version="1.0"?>
 <project name="rest4raspi" default="all">
-
+	
+	<property file = "wallace.properties"/>
 	<!--
-	<property name="mvnExecutable" value="C:\bin\apache-maven-3.5.0\bin\mvn" />
 	<property name="sourceDir" value="C:\Users\thomas\OneDrive\Dokumente\Raspberry\workspaces\i2cClient\target" />
 	<property name="targetDir" value="/home/pi/rest4raspi" />
 	<property name="user" value="pi" />
 	<property name="host" value="192.168.178.23"/>
-	<property name="keyfile" value="C:\bin\cygwin\home\thomas\.ssh\id_rsa" />
-	-->
 
-	<property name="mvnExecutable" value="C:\bin\apache-maven-3.6.0\bin\mvn" />
-	<property name="sourceDir" value="C:\DEV\Raspberry\workspaces\i2cClient\target" />
+	
+
+	<property name="mvnExecutable" value="C:\bin\apache-maven-3.5.0\bin\mvn" />
+	<property name="sourceDir" value="C:\Users\thomas\Documents\workspaces\i2cclient-git\target" />
 	<property name="targetDir" value="/home/pi/rest4raspi" />
 	<property name="user" value="pi" />
 	<property name="host" value="192.168.0.150" />
-	<property name="keyfile" value="C:\DEV\bin\cygwin64\home\HERBTHO2\.ssh\id_rsa" />
-	<property name="knownhostsfile" value="C:\DEV\bin\cygwin64\home\HERBTHO2\.ssh\known_hosts" />
+	<property name="keyfile" value="C:\bin\cygwin\home\thomas\.ssh\id_rsa" />
+	<property name="knownhostsfile" value="C:\bin\cygwin\home\thomas\.ssh\known_hosts" />
 
-
+-->
 
 	<target name="info">
 		<echo>This is the barographDeviceclient buildfile</echo>
