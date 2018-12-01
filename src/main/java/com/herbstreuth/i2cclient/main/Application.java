@@ -46,12 +46,6 @@ public class Application {
 		boolean initSuccess = true;
 		Configuration conf = Configuration.getInstance();
 
-		// Basic check for number of mandatory arguments
-		if (args.length < 6) { // At the very least we require a sensortype, an address and at least one output
-			printUsage(args);
-			initSuccess = false;
-		}
-
 		try { // we might either run into an Arrayindex exception here or leave this check
 				// block with an exception
 
@@ -179,6 +173,24 @@ public class Application {
 				}
 				conf.setVerbose(verbose);
 			}
+			
+			// sanity check output channels
+			if (conf.getOutputchannels().size() == 0) {
+				throw new Exception("You need to give at least one output channel. See --output");
+			}
+			
+			// sanity check i2c address
+			if (conf.getI2caddress() <= 0 | conf.getI2caddress() >= 0x77 ) {
+				throw new Exception("Invalid or missing i2c address. See --i2caddress.");
+			}
+			
+			// sanity check i2c address
+			if (conf.getSensortype() == 0 ) {
+				throw new Exception("Missing sensortype. See --i2caddress. See --sensortype");
+			}
+			
+			
+			
 
 			this.printToConsole("Configuration:");
 			this.printToConsole("---------------------");
@@ -222,6 +234,8 @@ public class Application {
 
 	private void printUsage(String[] args) {
 		StringBuilder message = new StringBuilder();
+		message.append("\n");
+		message.append("\n");
 		message.append("ERR - Invalid arguments" + "\n");
 		for (int i = 0; i < args.length; i++) {
 			message.append("[" + i + "] = [" + args[i] + "]" + "\n");
@@ -238,6 +252,7 @@ public class Application {
 				"--output comma separated list of at least one from: CONSOLE|KAFKA|MQTT i.e. CONSOLE,KAFKA or MQTT,KAFKA or ..."
 						+ "\n");
 
+		message.append("\n");
 		message.append("If you chose output to KAFKA" + "\n");
 		message.append("--------------------------------------" + "\n");
 		message.append(
